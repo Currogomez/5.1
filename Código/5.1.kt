@@ -14,7 +14,7 @@ class Curso(val nombre: String, val codigo: String) {
 
     fun mostrarEstudiantes() {
         if (estudiantes.isEmpty()) {
-            println("🚨 No hay nadie inscrito en el curso $nombre. ¿Qué pasó, profe? 😅")
+            println("🚨 No hay nadie inscrito en el curso $nombre.")
         } else {
             println("📚 Estudiantes en el curso $nombre:")
             estudiantes.forEach { println("- ${it.nombre} (DNI: ${it.dni})") } // Listamos los inscritos
@@ -27,7 +27,7 @@ class Curso(val nombre: String, val codigo: String) {
 class Estudiante(val nombre: String, val dni: String) {
 
     // Método para inscribirse en un curso.
-    
+
     fun inscribirse(curso: Curso) {
         curso.agregarAlumno(this) // El estudiante se inscribe llamando al método del curso
     }
